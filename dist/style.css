@@ -1,0 +1,71 @@
+/*
+ * variables
+ */
+/*
+ * general
+ */
+body {
+  background: #f76555;
+  font-family: "Helvetica Neue Light", sans-serif;
+  font-weight: 100;
+  padding: 0;
+  margin: 0; }
+
+/*
+ * specific
+ */
+#frontpageTitle {
+  width: 64px;
+  height: 64px;
+  margin: 0.5ex auto 0 auto;
+  background: no-repeat url("../img/tim-ruffles.png");
+  background-size: cover;
+  text-indent: -500rem;
+  overflow: hidden; }
+
+article {
+  position: absolute;
+  min-height: 600px;
+  width: 100%; }
+  article svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+  article polygon {
+    -webkit-filter: drop-shadow(-5px -5px 5px #000); }
+  article h2 {
+    text-align: center;
+    margin: 5ex 5ex 2ex 5ex;
+    text-transform: uppercase; }
+  article p {
+    margin: 2ex 4ex; }
+
+.svgResize {
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden; }
+
+nav {
+  text-align: center;
+  margin: 1ex 0; }
+  nav a {
+    color: #fff;
+    text-transform: lowercase; }
+    nav a::after {
+      content: "|"; }
+    nav a:last-child::after {
+      content: ""; }
+
+/*
+ * typography
+ */
+h1, h2, h3, a {
+  color: #f76555; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3 {
+  font-weight: 100; }

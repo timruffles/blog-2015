@@ -1,0 +1,8 @@
+<svg width=3000 height=1000>
+  <g transform="translate(50,50)">
+    <polygon 
+      fill="#eaeaea"
+      points='0 75  75 0  225 0  300 75  300 225  225 300  75 300  0 225  0 100'
+    ></polygon>
+  </g>
+</svg>
