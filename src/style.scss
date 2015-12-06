@@ -1,7 +1,10 @@
+@import "../vendor/bourbon/bourbon";
+
 /*
  * variables
  */
 $mainColor: hsl(6, 91%, 65%);
+$bodyTextPadding: 4em;
 
 /*
  * general
@@ -11,7 +14,8 @@ body {
   font-family: "Helvetica Neue Light", sans-serif;
   font-weight: 100;
   padding: 0;
-  margin: 0; }
+  margin: 0; 
+}
 
 /*
  * specific
@@ -19,7 +23,7 @@ body {
 #frontpageTitle {
   width: 64px;
   height: 64px;
-  margin: 0.5ex auto 0 auto;
+  margin: 1ex auto 0 auto;
   background: no-repeat url('../img/tim-ruffles.png'); 
   background-size: cover;
   // hide
@@ -27,40 +31,65 @@ body {
   overflow: hidden;
 }
 
-article {
-  position: absolute;
-  min-height: 600px;
-  width: 100%;
 
+article {
+  width: 100%;
+  overflow: visible;
+
+  max-width: 40rem;
+  margin: 0 auto;
 
   svg {
-    position: absolute;
-    top: 0;
     left: 0;
-    z-index: -1;
+  }
+
+  .content {
+    position: relative;
+    background: #fff;
+    padding: 4ex 0 6ex 0;
+    top: -4px;
   }
 
   polygon {
-     -webkit-filter: drop-shadow( -5px -5px 5px #000 );
+    fill: #fff;
+  }
+
+  p {
+    padding: 0 $bodyTextPadding;
+  }
+
+  p, h2 {
   }
 
   h2 {
     text-align: center;
-    margin: 5ex 5ex 2ex 5ex;
     text-transform: uppercase;
+    margin-top: 0;
+    font-size: 2.5rem;
+    margin-bottom: 1rex;
+    padding-top: 1ex;
   }
 
-  p {
-    margin: 2ex 4ex;
+  .top {
+    width: 25%;
+  }
+
+
+  .footer {
+    margin-top: 4ex;
+    a {
+      padding: 0 $bodyTextPadding;
+    }
+    a:first-child {
+      float: left;
+    }
+    a:last-child {
+      float: right;
+    }
   }
 }
 
 
-.svgResize {
-  width: 100%;
-  padding-bottom: 100%;
-  vertical-align: middle;
-  overflow: hidden; }
 
 
 nav {

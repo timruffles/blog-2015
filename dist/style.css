@@ -17,35 +17,45 @@ body {
 #frontpageTitle {
   width: 64px;
   height: 64px;
-  margin: 0.5ex auto 0 auto;
+  margin: 1ex auto 0 auto;
   background: no-repeat url("../img/tim-ruffles.png");
   background-size: cover;
   text-indent: -500rem;
   overflow: hidden; }
 
 article {
-  position: absolute;
-  min-height: 600px;
-  width: 100%; }
+  width: 100%;
+  overflow: visible;
+  max-width: 40rem;
+  margin: 0 auto; }
   article svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; }
+    left: 0; }
+  article .content {
+    position: relative;
+    background: #fff;
+    padding: 4ex 0 6ex 0;
+    top: -4px; }
   article polygon {
-    -webkit-filter: drop-shadow(-5px -5px 5px #000); }
+    fill: #fff; }
+  article p {
+    padding: 0 4em; }
   article h2 {
     text-align: center;
-    margin: 5ex 5ex 2ex 5ex;
-    text-transform: uppercase; }
-  article p {
-    margin: 2ex 4ex; }
-
-.svgResize {
-  width: 100%;
-  padding-bottom: 100%;
-  vertical-align: middle;
-  overflow: hidden; }
+    text-transform: uppercase;
+    margin-top: 0;
+    font-size: 2.5rem;
+    margin-bottom: 1rex;
+    padding-top: 1ex; }
+  article .top {
+    width: 25%; }
+  article .footer {
+    margin-top: 4ex; }
+    article .footer a {
+      padding: 0 4em; }
+    article .footer a:first-child {
+      float: left; }
+    article .footer a:last-child {
+      float: right; }
 
 nav {
   text-align: center;
