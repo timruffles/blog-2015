@@ -1,10 +1,11 @@
-@import "../vendor/bourbon/bourbon";
+@import "bourbon";
+@import "neat";
 
 /*
  * variables
  */
 $mainColor: hsl(6, 91%, 65%);
-$bodyTextPadding: 4em;
+$bodyTextPadding: 2rem;
 
 /*
  * general
@@ -14,28 +15,46 @@ body {
   font-family: "Helvetica Neue Light", sans-serif;
   font-weight: 100;
   padding: 0;
-  margin: 0; 
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box; 
 }
 
 /*
  * specific
  */
-#frontpageTitle {
-  width: 64px;
-  height: 64px;
+#header {
   margin: 1ex auto 0 auto;
-  background: no-repeat url('../img/tim-ruffles.png'); 
   background-size: cover;
   // hide
   text-indent: -500rem;
   overflow: hidden;
+  position: relative;
+
+  canvas {
+    position: absolute;
+    transform-origin: 0 0;
+    top: 0;
+    left: 0;
+  }
 }
 
+#headerImage {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.outer {
+  @include outer-container();
+}
 
 article {
-  width: 100%;
   overflow: visible;
 
+  width: 100%;
   max-width: 40rem;
   margin: 0 auto;
 
@@ -47,7 +66,7 @@ article {
     position: relative;
     background: #fff;
     padding: 4ex 0 6ex 0;
-    top: -4px;
+    top: -4.5px;
   }
 
   polygon {
@@ -62,12 +81,12 @@ article {
   }
 
   h2 {
-    text-align: center;
+    margin-top: 0.5em;
     text-transform: uppercase;
-    margin-top: 0;
     font-size: 2.5rem;
     margin-bottom: 1rex;
     padding-top: 1ex;
+    padding: 0 $bodyTextPadding;
   }
 
   .top {
@@ -80,11 +99,11 @@ article {
     a {
       padding: 0 $bodyTextPadding;
     }
-    a:first-child {
-      float: left;
-    }
-    a:last-child {
-      float: right;
+    hr {
+      width: 40%;
+      margin: 1rem auto;
+      border: none;
+      border-top: 1px solid $mainColor;
     }
   }
 }
@@ -120,3 +139,34 @@ a {
 h1, h2, h3 {
   font-weight: 100; }
 
+/*
+ * forms
+ */
+.subscribe {
+  overflow: auto;
+  padding: 0 $bodyTextPadding;
+  input {
+    float: left;
+    height: 2.5rem;
+    margin-right: 0;
+    box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
+    border: 1px solid #cecece;
+    border-radius: 0;
+  }
+  input[type=email] {
+    padding: 1rem;
+    width: 12rem;
+  }
+  input[type=submit] {
+    background: $mainColor;
+    color: #fff;
+    border: none;
+    width: 6rem;
+    margin-left: 1rem;
+    padding: 0.25rem .5rem;
+  }
+}
+
+.subscribeHint {
+  color: #555;
+}
